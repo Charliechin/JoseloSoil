@@ -124,7 +124,7 @@ void setup() {
 
 void loop() {
 
-  if(readMoisture() < 25 && !DEBUG){
+  if(readMoisture() < 10 && !DEBUG){
 
     sendNotification();
     //   cada 180 mins, estoy seca
@@ -135,7 +135,7 @@ void loop() {
  
     Serial.print("New Value: ");
     Serial.println(readMoisture() );
-    delay(100);
+    delay( 120 * 1000);
   }
 
 }
